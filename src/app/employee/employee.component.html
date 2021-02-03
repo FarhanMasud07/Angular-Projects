@@ -1,0 +1,23 @@
+<h2>Employee Component</h2>
+<div *ngIf="error;then showError;else showEmployee"></div>
+
+<ng-template #showError>
+    {{error}}
+</ng-template >
+
+<ng-template #showEmployee>
+    <div *ngFor="let employee of AllEmployees">
+        <p>{{employee.name}}</p>
+    </div>
+</ng-template>
+
+
+<h1>Component Interaction INPUT from parent to child</h1>
+<div *ngFor="let user of AllState.users">
+    
+    {{user.name}}
+</div>
+
+
+<h1>Send Data from child to parent component</h1>
+<button (click)="fireEvent()">Click</button>

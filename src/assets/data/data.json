@@ -1,0 +1,17 @@
+[
+    {
+      "name":"Zakia",
+      "department":"fintech",
+      "age":25
+    },
+    {
+      "name":"Farhan",
+      "department":"fintech",
+      "age":26
+    },
+    {
+      "name":"Zaman",
+      "department":"fintech",
+      "age":35
+    }
+]

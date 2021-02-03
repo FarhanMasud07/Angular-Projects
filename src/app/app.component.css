@@ -1,0 +1,13 @@
+.text-success {
+    color:green;
+    font-family: sans-serif;
+}
+
+.text-danger {
+    color:red;
+    
+}
+
+.text-info {
+    color:cadetblue
+}

@@ -1,0 +1,12 @@
+<h2>Employee Details Component</h2>
+<div *ngIf="!error;then showEmployeeDetails;else showError"></div>
+<ng-template #showEmployeeDetails>
+    <div *ngFor="let employee of AllEmployees">
+        <p>{{employee.name}}</p>
+    </div>
+</ng-template>
+<ng-template #showError>
+    {{error}}
+</ng-template>
+
+

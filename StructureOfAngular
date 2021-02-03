@@ -1,0 +1,251 @@
+1. e2e
+     - End to end test scripts will residing
+     - Protractor framework use to run end to end tests
+        - Jasmine and Karma runner(Unit Test)
+     - app.po.ts -> Protractor file which will have "po" file
+     - app.e2e-spec.ts
+        - e2e - it tells that this script is end to end test script 
+        -spec- whenever you spec added - that means it is a test script
+
+2. node modules
+     - this is the folder where all the module and libraries reside =(ex npm i bootstrap this will be in nodemodule)
+     - we will not touch this folder for dev purpose
+
+
+3. src 
+     - This is the main workspace/app code resides inside this folder
+     - This is the basic Structure
+     - app folder is the place where you see the component, module, services, directives,pipes,etc
+     - app.component.ts [where you see component - it means that file corresponds to a component]
+     - app.module.ts [it means this is a module]
+     - app.service.ts [it means this is a service file]
+     - app.component.spec.ts file [it meand thisare unit test scripts]
+     - assests
+        - styles
+        - icons
+        - images, etc
+     - env
+        - here we will configure variable or pipelines for dev,test,stage and prod
+     - polyfills - if the user browser is outdated one- polyfills will add ES6 functionality
+        - backward compatible
+
+
+
+
+
+========================================
+    Booting process
+
+     - Main.ts [This is where booting things happen/Starting point]
+        - we need atleast 1 module to be present in our main.ts
+        - bootstrapModule is the one which loads and starts the application. THis is not related to bootstrap framework
+        - we can change the default app module with something new module
+     - test.ts [Test script for booting process]
+========================================
+
+
+
+
+
+
+
+
+     - Styles.css 
+        - Global StyleSheet
+        - Dont make it too heavy
+        - Generic/Common Typography,fonts,styles
+
+    
+4. angular.json
+        - this is a file for all the configuration of our angular project
+    
+     - Kama.conf.js 
+        - karma runner for running out unit test script
+        - configure out test script
+
+
+5. package.json
+
+6. tsconfig.json - build and compilation related to our angular application
+
+7. package-lock.json
+
+8. tslint.json - linting or coding standards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===================================
+         Angular CLi
+
+1. ng new <project-name>
+2. ng --version
+3. ng generate (important)
+   - ng g service authenticate
+   - ng g component login
+   - ng g module authorize
+   - ng g pipe highlight
+
+4. ng serve 
+   - used for transpiling/compiling our application..
+   - ng serve 4000 (Serve the application given port)
+
+5. ng test 
+   - will run for unit test 
+   - tests are run using karma runner
+   - unit test are writting using jesmin framework
+   - code coverage
+   - we can disable some tests
+
+6. ng e2e
+   - it will run all our end to end tests
+   - .e2e-spec.ts - these are end to end test scripts
+   - Protractor
+
+7. ng update
+   - if you are running on version than current version
+
+8. ng build 
+   - build and generate the output of your application
+   - compiled javascript code
+   - this is mainly used for promoting code to high env
+
+9. ng lint
+   - code syntax linting
+   - set rules for how code should be written
+      - coding standards
+   - it following the coding standards
+
+===================================
+
+
+
+
+
+===================================
+         Angular module
+
+1. Modules in Angular are logical functionality
+2. For e.g users module 
+   - register
+   - forgot
+   - signup
+   - services
+3. modules can have components,services,directives,files,pipes etc
+   - all are related to a particular functionality
+4. plug and play features
+5. it allows to be modular, easy to maintain, easy to debug, it reduces the app footprint
+   - if you on a page which dose not need a module - simply don't load it
+
+6. By default every angular has one application at least
+   - appModule
+
+7. we need to import require modules from core packages
+   - browserModule
+   - ngModule
+
+8. every module needs to be define by @NgModule
+9. we can declear components we need. 
+10. imports other modules inside the module
+11. which is the default or first component to load inside the bootstrap
+===================================
+
+
+===================================
+            Angular decorators
+
+1. @NgModule, @Component, @Injectable
+2. define class decorator, input decorator etc
+3. this decorator has metadata
+   - has specific metadata
+4. decorators are the way to pass the metadata to angular application
+===================================
+
+
+
+
+
+
+
+===================================
+            Angular Component
+
+1. Component is a smaller functionality which can be reused multiple times in the application.
+2. smaller feature inside a bigger functionality
+   For Example
+      Authentication - module
+         login - component
+         forget-pass - component
+         register - component
+
+3. Allows in easy maintance and development
+4. Tree Hirerachy
+5. pug and play the components whever we need
+6. Tree hirarchy starts with component
+
+
+===================================
+
+
+
+
+
+
+===================================
+        Angular Directives
+
+
+- 3 types of directives 
+    - component 
+    - structural    
+    - attribute
+
+1. Component is a type of directives     
+    - class of its own
+    it has its own template
+        - every angular app must have atleast 1 directive(component)
+        - please refer to component tutorial
+
+2. Structural Directives
+    - Starts with (*) symbol
+    - These directive alter the structure of template
+    - *ngFor,*ngIf and *ngSwitch
+    - change the structure
+
+3. Attribute Directives 
+   There are mainly 2 attribute directives
+      ngClass and ngStyle
+
+<ng-template></ng-template> template reference variable
+
+
+===================================
+
+
+
+
+
+
+
+===================================
+         Observables
+
+- is a sequence of items that arrive asynchronously over time
+
+HTTP call - single items
+Single item - HTTP response
+
+so in the context of http machanism in angular an observable is nothing but a http response that arrives asynchronously
+
+
+===================================

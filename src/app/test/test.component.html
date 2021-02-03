@@ -1,0 +1,26 @@
+<!-- Pipe ex: uppercase,lowercase -->
+<h3>{{testApp | slice:2:4 | titlecase}}</h3> 
+
+
+<!-- Json pipe -->
+<h3>{{person | json}}</h3>
+
+<!-- Number pipe -->
+<h3>{{5.876|number:'1.1-2'}}</h3>
+<h3>{{5.876|number:'2.1-1'}}</h3>
+
+<!-- percent pipe -->
+<h3>{{0.876|percent}}</h3>
+
+<!-- currency pipe -->
+<h3>{{0.876|currency}}</h3>
+<h3>{{0.5 | currency:'BDT'}}</h3>
+<h3>{{0.9 | currency:'EUR' }}</h3>
+<h3>{{0.9 | currency:'EUR':'code' }}</h3>
+
+
+<!-- date pipe -->
+<h3>{{date}}</h3>
+<h3>{{date | date:'short'}}</h3>
+<h3>{{date | date:'shortDate'}}</h3>
+<h3>{{date | date:'shortTime'}}</h3>
